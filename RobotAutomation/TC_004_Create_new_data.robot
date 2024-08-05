@@ -5,7 +5,7 @@ Library  Collections
 
 
 *** Variables ***
-${base_url}=  http://thetestingworldapi.com/
+${base_url}=  https://thetestingworldapi.com/
 
 *** Test Cases ***
 TC_004_Create New Student
