@@ -5,7 +5,7 @@ Library  Collections
 Library  RequestsLibrary
 Library  JSONLibrary
 Library  Collections
-Resource  Resources/UserKeywords.robot
+Resource  ../../Resources/UserKeywords.robot
 
 
 *** Variables ***

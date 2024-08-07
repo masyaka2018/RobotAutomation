@@ -2,7 +2,7 @@
 Library  RequestsLibrary
 Library  JSONLibrary
 Library  Collections
-Resource  Resources/UserKeywords.robot
+Resource  ../../Resources/UserKeywords.robot
 
 *** Variables ***
 ${base_url}=  http://thetestingworldapi.com/
