@@ -24,11 +24,16 @@ TC_006_End_to_End_TestCase
     log to console  ${put_response.content}
     log to console  ${put_response.status_code}
 
-    ${get_request}=  get on session  E2E api/studentsDetails/${id}
-    @{lfirst_name}=  get value from json  ${get_request.json()}  data.first_name
-    ${first_name}=  get from list  ${lfirst_name} 0
-    should be equal  ${first_name} ${updated_first_name}
+    Fetch details and Validate  ${id}
 
-     ${delete_reposne}=  'delete on session'  E2E  api/studentsDetails/${id}
-     ${code}=  convert to string  ${delete_reposne.status_code}
-     should be equal  ${code}  200
+    ${delete_reposne}=  'delete on session'  E2E  api/studentsDetails/${id}
+    ${code}=  convert to string  ${delete_reposne.status_code}
+    should be equal  ${code}  200
+
+*** Keywords ***
+Fetch details and Validate
+     [Arguments]  ${id}
+     ${get_request}=  get on session  E2E api/studentsDetails/${id}
+     @{lfirst_name}=  get value from json  ${get_request.json()}  data.first_name
+     ${first_name}=  get from list  ${lfirst_name} 0
+     should be equal  ${first_name} ${updated_first_name}
