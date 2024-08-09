@@ -25,4 +25,9 @@ Fetch Request Content
     ${json_body}=  read request content
     [RETURN]  ${json_body}
 
-
+Welcome User
+    [Documentation]  Executing New Test Case
+    log to console   This is Staring of TestCase
+End TestCase
+   [Documentation]  TestCase Completed
+   log to console  This is End of Test Case

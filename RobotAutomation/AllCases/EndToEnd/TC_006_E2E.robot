@@ -11,6 +11,7 @@ ${updated_first_name}=  Testing
 
 *** Test Cases ***
 TC_006_End_to_End_TestCase
+    [Documentation]     This is test-case for end-to-end scenario
     create session  E2E  ${base_url}
     &{body}=  create dictionary   first_name=${original_first_name}  last_name=Last  middle_name=K  date_of_birth=12/02/1999
     &{header}=  create dictionary  Content-Type=application/json
