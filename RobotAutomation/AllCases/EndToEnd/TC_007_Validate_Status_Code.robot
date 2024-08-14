@@ -7,6 +7,10 @@ Library  JSONLibrary
 Library  Collections
 Resource  ../../Resources/UserKeywords.robot
 
+Test Setup  Welcome User
+Test Teardown  End TestCase
+Default Tags  Hello
+
 
 *** Variables ***
 ${App_Base_URL}  http://thetestingworldapi.com/

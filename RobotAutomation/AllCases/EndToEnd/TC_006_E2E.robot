@@ -2,7 +2,7 @@
 Library  RequestsLibrary
 Library  JSONLibrary
 Library  Collections
-
+Force Tags  Hello
 
 *** Variables ***
 ${base_url}=  http://thetestingworldapi.com/

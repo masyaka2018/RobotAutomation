@@ -11,6 +11,7 @@ ${StudentID}  10304554
 *** Test Cases ***
 TC_001_Fetch_Student_Details_by_id
     [Setup]  Welcome User
+    [Tags]  Smoke  Sanity
     create session  FetchData  ${App_Base_URL}
     ${Response}=  get on session  FetchData  api/studentsDetails/${StudentID}
     ${actual_code}=  convert to string  ${Response.status_code}
